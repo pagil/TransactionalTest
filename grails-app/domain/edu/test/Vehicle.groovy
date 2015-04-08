@@ -1,7 +1,5 @@
 package edu.test
 
 class Vehicle {
-
-    static constraints = {
-    }
+    String name
 }

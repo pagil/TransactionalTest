@@ -1,6 +1,16 @@
 package edu.test
 
-class VehicleController {
+import grails.converters.JSON
 
-    def index() { }
+class VehicleController {
+    def vehicleService
+
+    def index() {
+        render(['Up and running!'] as JSON)
+    }
+
+    def create() {
+        def v = vehicleService.createVehicle(params.name)
+        render(v as JSON)
+    }
 }

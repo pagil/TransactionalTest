@@ -45,6 +45,10 @@ grails.views.default.codec = "html"
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
 
+// See http://stackoverflow.com/questions/12528947/what-is-replacement-for-grails-converters-deep-json
+// Was added to enable deep conversion to JSON
+grails.converters.json.default.deep = true
+
 // GSP settings
 grails {
     views {
