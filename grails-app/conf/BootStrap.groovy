@@ -18,12 +18,18 @@ class BootStrap {
                 .save()
 
         new LiveStock(name: "Test")
-                .addToPriceHistories(new PriceHistory(value: 100))
-                .addToPriceHistories(new PriceHistory(value: 200))
-                .addToPriceHistories(new PriceHistory(value: 300))
+                .addToPriceHistories(new PriceHistory(value: 100, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 200, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 300, changeDate: generateRandomDate()))
                 .save()
 
     }
+
     def destroy = {
     }
+
+    def generateRandomDate() {
+        (new Date()..new Date(2014-1900,5,1)).toList().sort{Math.random()}[0]
+    }
+
 }

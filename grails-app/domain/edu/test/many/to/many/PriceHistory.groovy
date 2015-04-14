@@ -4,4 +4,6 @@ class PriceHistory {
 
     Integer value
 
+    Date changeDate
+
 }
