@@ -17,10 +17,34 @@ class BootStrap {
                 .addToAuthors(new Author(name: "Guillaume Laforge"))
                 .save()
 
-        new LiveStock(name: "Test")
+        new LiveStock(name: "Test1")
                 .addToPriceHistories(new PriceHistory(value: 100, changeDate: generateRandomDate()))
                 .addToPriceHistories(new PriceHistory(value: 200, changeDate: generateRandomDate()))
                 .addToPriceHistories(new PriceHistory(value: 300, changeDate: generateRandomDate()))
+                .save()
+
+        new LiveStock(name: "Test2")
+                .addToPriceHistories(new PriceHistory(value: 100, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 200, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 300, changeDate: generateRandomDate()))
+                .save()
+
+        new LiveStock(name: "Test3")
+                .addToPriceHistories(new PriceHistory(value: 100, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 200, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 300, changeDate: generateRandomDate()))
+                .save()
+
+        new LiveStock(name: "Test4")
+                .addToPriceHistories(new PriceHistory(value: 100, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 200, changeDate: generateRandomDate()))
+                .addToPriceHistories(new PriceHistory(value: 300, changeDate: generateRandomDate()))
+                .save()
+
+        new LiveStock(name: "Test5").save()
+
+        new LiveStock(name: "Test6")
+                .addToPriceHistories(new PriceHistory(value: 500, changeDate: generateRandomDate()))
                 .save()
 
     }
