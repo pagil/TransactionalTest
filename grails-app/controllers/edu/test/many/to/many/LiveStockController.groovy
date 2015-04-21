@@ -9,8 +9,13 @@ class LiveStockController {
     }
 
     def sort() {
+//        def result = LiveStock.createCriteria().list {
+//            order ('valueNotNull', 'desc')
+//            order("lastPriceChangeDate", "asc")
+//        }
+
         def result = LiveStock.createCriteria().list {
-            order("lastPriceChangeDate", "desc")
+            if ('true'.equalsIgnoreCase(params.nullsLast)) order ('valueNotNull', 'desc')
         }
         render (result as JSON)
     }
