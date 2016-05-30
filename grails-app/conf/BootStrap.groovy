@@ -1,3 +1,5 @@
+import edu.test.idx.suffix.Item
+import edu.test.idx.suffix.Media
 import edu.test.many.to.many.Author
 import edu.test.many.to.many.Book
 import edu.test.many.to.many.LiveStock
@@ -53,6 +55,14 @@ class BootStrap {
         new LiveStock(name: "Test8", testValue: 1).save()
         new LiveStock(name: "Test9", testValue: 5).save()
         new LiveStock(name: "Test10", testValue: null).save()
+
+
+        def item = new Item(itemName: "Item 1")
+        item.addToMedia(new Media(fileName: "Media File 1"))
+        item.addToMedia(new Media(fileName: "Media File 2"))
+        item.addToMedia(new Media(fileName: "Media File 3"))
+        item.addToMedia(new Media(fileName: "Media File 4"))
+        item.save(failOnError: true)
     }
 
     def destroy = {
